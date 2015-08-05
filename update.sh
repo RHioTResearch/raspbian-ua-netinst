@@ -34,6 +34,14 @@ packages+=("lsb-base")
 packages+=("netbase")
 packages+=("ntpdate")
 packages+=("raspbian-archive-keyring")
+packages+=("build-essential")
+packages+=("uuid-dev")
+packages+=("git")
+packages+=("cmake")
+packages+=("bluez")
+packages+=("bluez-hcidump")
+packages+=("gcc-4.8")
+packages+=("g++-4.8")
 
 # libraries
 packages+=("libblkid1")
@@ -45,7 +53,12 @@ packages+=("liblzo2-2")
 packages+=("libssl1.0.0")
 packages+=("libuuid1")
 packages+=("zlib1g")
-
+packages+=("libglib2.0-dev")
+packages+=("libdbus-c++-dev")
+packages+=("libssl-dev")
+packages+=("libreadline-dev")
+packages+=("libudev-dev")
+packages+=("libbluetooth-dev")
 
 check_key() {
     # param 1 = keyfile

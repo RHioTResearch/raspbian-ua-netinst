@@ -317,11 +317,18 @@ fi
 if [ -f post-install.txt ]; then
     cp post-install.txt bootfs/
 fi
+# Copy additional non-package content to use
+if [ -d post-install ]; then
+  mkdir bootfs/post-install
+  cp post-install/* bootfs/post-install
+fi
 
 if [ -d config ] ; then
     mkdir bootfs/config
     cp -r config/* bootfs/config
 fi
+
+
 
 ZIPFILE=raspbian-ua-netinst-`date +%Y%m%d`-git`git rev-parse --short @{0}`.zip
 rm -f $ZIPFILE

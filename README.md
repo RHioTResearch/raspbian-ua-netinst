@@ -126,6 +126,16 @@ Presets set the `cdebootstrap_cmdline` variable. For example, the current _serve
 
 (If you build your own installer, which most won't need to, and the configuration files exist in the same directory as this `README.md`, it will be include in the installer image automatically.)
 
+### post-install directory
+The RHIoT changes support putting additional non-package content into the root user directory. Examples of
+where this is useful in the installation of maven. Not only are the maven packages out of date, there are a
+huge number of dependencies pulled in.
+
+**TODO: still have a problem with how to install this as the post-install.txt script run in single user mode
+and does not have the root user setup as expected, nor are the usual command paths available. I have
+asked about being able to add a /etc/rc.local script to the post install image.
+https://github.com/debian-pi/raspbian-ua-netinst/issues/274
+
 ## Logging
 The output of the installation process is now also logged to file.  
 When the installation completes successfully, the logfile is moved to /var/log/raspbian-ua-netinst.log on the installed system.  
